@@ -8,7 +8,7 @@ public class StringCalculator {
             return 0;
         }
 
-        String delimiter = ",|\n"; // Default delimiters
+        String delimiter = ",|\n";
 
         if (numbers.startsWith("//")) {
             Matcher matcher = Pattern.compile("//(.)\n(.*)").matcher(numbers);
@@ -20,9 +20,23 @@ public class StringCalculator {
 
         String[] parts = numbers.split(delimiter);
         int sum = 0;
+        StringBuilder negatives = new StringBuilder();
+
         for (String num : parts) {
-            sum += Integer.parseInt(num);
+            int value = Integer.parseInt(num);
+            if (value < 0) {
+                if (negatives.length() > 0) {
+                    negatives.append(", ");
+                }
+                negatives.append(value);
+            }
+            sum += value;
         }
+
+        if (negatives.length() > 0) {
+            throw new IllegalArgumentException("negative numbers not allowed: " + negatives.toString().trim());
+        }
+
         return sum;
     }
 }
