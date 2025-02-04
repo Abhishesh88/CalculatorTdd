@@ -1,5 +1,5 @@
 #surefire
-#Tue Feb 04 22:32:39 IST 2025
+#Tue Feb 04 22:38:12 IST 2025
 childDelegation=false
 classPathUrl.0=/Users/abhisheshmishra/Abhishesh/lorien-finance/docs/CalculatorTdd/target/test-classes
 classPathUrl.1=/Users/abhisheshmishra/Abhishesh/lorien-finance/docs/CalculatorTdd/target/classes
@@ -27,7 +27,7 @@ mainCliOptions1=LOGGING_LEVEL_WARN
 mainCliOptions2=LOGGING_LEVEL_INFO
 mainCliOptions3=LOGGING_LEVEL_DEBUG
 mainCliOptions4=SHOW_ERRORS
-pluginPid=77112
+pluginPid=81029
 preferTestsFromInStream=false
 providerConfiguration=org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
 reportsDirectory=/Users/abhisheshmishra/Abhishesh/lorien-finance/docs/CalculatorTdd/target/surefire-reports

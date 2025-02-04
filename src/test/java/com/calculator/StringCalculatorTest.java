@@ -53,5 +53,12 @@ class StringCalculatorTest {
         assertEquals(15, result2);
     }
     
+    @Test
+    void whenNewlineAsDelimiterReturnsSum() {
+        int result = calculator.add("1\n2,3");
+        System.out.println("Newline as delimiter test: expected=6, actual=" + result);
+        assertEquals(6, result);
+    }
+
     
 } 
