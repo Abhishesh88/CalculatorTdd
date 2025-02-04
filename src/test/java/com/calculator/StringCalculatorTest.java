@@ -10,17 +10,48 @@ class StringCalculatorTest {
     @BeforeEach
     void setUp() {
         calculator = new StringCalculator();
+        System.out.println("\n----- Starting new test -----");
     }
 
     @Test
     void whenEmptyStringProvidedReturnsZero() {
-        assertEquals(0, calculator.add(""));
+        int result = calculator.add("");
+        System.out.println("Empty string test: expected=0, actual=" + result);
+        assertEquals(0, result);
     }
 
     @Test
     void whenSingleNumberProvidedReturnsSameNumber() {
-        assertEquals(1, calculator.add("1"));
-        assertEquals(5, calculator.add("5"));
+        int result1 = calculator.add("1");
+        System.out.println("Single number test 1: expected=1, actual=" + result1);
+        assertEquals(1, result1);
+
+        int result2 = calculator.add("5");
+        System.out.println("Single number test 2: expected=5, actual=" + result2);
+        assertEquals(5, result2);
     }
+
+    @Test
+    void whenTwoNumbersProvidedReturnsSum() {
+        int result1 = calculator.add("1,2");
+        System.out.println("Two numbers test 1: expected=3, actual=" + result1);
+        assertEquals(3, result1);
+
+        int result2 = calculator.add("4,5");
+        System.out.println("Two numbers test 2: expected=9, actual=" + result2);
+        assertEquals(9, result2);
+    }
+    
+    @Test
+    void whenMultipleNumbersProvidedReturnsSum() {
+        int result1 = calculator.add("1,2,3,4");
+        System.out.println("Multiple numbers test 1: expected=10, actual=" + result1);
+        assertEquals(10, result1);
+
+        int result2 = calculator.add("5,5,5");
+        System.out.println("Multiple numbers test 2: expected=15, actual=" + result2);
+        assertEquals(15, result2);
+    }
+    
     
 } 
