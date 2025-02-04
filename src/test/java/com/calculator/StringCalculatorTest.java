@@ -60,5 +60,12 @@ class StringCalculatorTest {
         assertEquals(6, result);
     }
 
-    
+    @Test
+    void whenCustomDelimiterReturnsSum() {
+        int result = calculator.add("//;\n1;2");
+        System.out.println("Custom delimiter test: expected=3, actual=" + result);
+        assertEquals(3, result);
+    }
+
+        
 } 
