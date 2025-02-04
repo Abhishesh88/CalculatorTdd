@@ -4,11 +4,22 @@ import java.util.regex.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A string calculator that adds numbers provided in string format.
+ * Supports multiple delimiters and validates against negative numbers.
+ */
 public class StringCalculator {
     private static final String DEFAULT_DELIMITER = ",|\n";
     private static final String CUSTOM_DELIMITER_PREFIX = "//";
     private static final Pattern CUSTOM_DELIMITER_PATTERN = Pattern.compile("//(.)\\n(.*)");
 
+    /**
+     * Adds numbers provided in a string format.
+     *
+     * @param numbers String containing numbers to add, can be empty
+     * @return sum of the numbers
+     * @throws IllegalArgumentException if negative numbers are found
+     */
     public int add(String numbers) {
         if (numbers.isEmpty()) {
             return 0;
