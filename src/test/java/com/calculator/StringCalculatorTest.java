@@ -16,4 +16,11 @@ class StringCalculatorTest {
     void whenEmptyStringProvidedReturnsZero() {
         assertEquals(0, calculator.add(""));
     }
+
+    @Test
+    void whenSingleNumberProvidedReturnsSameNumber() {
+        assertEquals(1, calculator.add("1"));
+        assertEquals(5, calculator.add("5"));
+    }
+    
 } 

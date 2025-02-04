@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.calculator.StringCalculatorTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.calculator.StringCalculatorTest
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! - in com.calculator.StringCalculatorTest
+com.calculator.StringCalculatorTest.whenSingleNumberProvidedReturnsSameNumber  Time elapsed: 0.014 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at com.calculator.StringCalculatorTest.whenSingleNumberProvidedReturnsSameNumber(StringCalculatorTest.java:22)
+
